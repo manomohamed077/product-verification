@@ -7,75 +7,176 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <header class="top-header">
     <div class="brand-row">
-      <img src="assets/logo.png" class="brand-logo" alt="Arab Computers" />
+      <img src="Logo.png" class="brand-logo" alt="Arab Computers" />
       <div class="divider"></div>
-      <div class="apple-box"><span class="apple-symbol"></span><span>Authorised<br>Distributor</span></div>
+      <div class="apple-box">
+        <span class="apple-symbol"></span>
+        <span>Authorised<br>Distributor</span>
+      </div>
     </div>
   </header>
 
   <div class="breadcrumb">
-    <span>Home</span><span class="arrow">›</span><strong>Check sticker</strong>
+    <span>Home</span>
+    <span class="arrow">›</span>
+    <strong>Check sticker</strong>
   </div>
 
   <main class="page">
+
     <h1>Warranty sticker<br>validation</h1>
-    <p class="intro">Check if the warranty sticker on your product is genuine.</p>
-    <p class="intro ar">تأكد إذا كان ملصق الضمان الموجود على منتجك هو ملصق أصلي أو مزيف</p>
+
+    <p class="intro">
+      Check if the warranty sticker on your product is genuine.
+    </p>
+
+    <p class="intro ar">
+      تأكد إذا كان ملصق الضمان الموجود على منتجك هو ملصق أصلي أو مزيف
+    </p>
 
     <section class="sticker-section">
+
       <h2>الشكل القديم</h2>
-      <img src="assets/old-sticker.png" class="sticker-img" alt="Old sticker example" />
+
+      <img
+        src="old-sticker.png"
+        class="sticker-img"
+        alt="Old sticker example"
+      />
 
       <h2 class="new-title">الشكل الجديد</h2>
-      <img src="assets/new-sticker.png" class="sticker-img" alt="New sticker example" />
+
+      <img
+        src="new-sticker.png"
+        class="sticker-img"
+        alt="New sticker example"
+      />
+
     </section>
 
     <section class="check-section">
-      <p class="input-title">Enter the number shown on the sticker in this box:</p>
-      <p class="input-title ar">أدخل الرقم الموجود على الملصق هنا</p>
+
+      <p class="input-title">
+        Enter the number shown on the sticker in this box:
+      </p>
+
+      <p class="input-title ar">
+        أدخل الرقم الموجود على الملصق هنا
+      </p>
 
       <div class="input-row">
-        <input id="codeInput" type="text" placeholder="XXXXXX" autocomplete="off" />
-        <button id="qrBtn" class="qr-btn" type="button" aria-label="Scan QR code">▦</button>
-        <button id="checkBtn" class="check-btn" type="button">Check</button>
+        <input
+          id="codeInput"
+          type="text"
+          placeholder="XXXXXX"
+          autocomplete="off"
+        />
+
+        <button
+          id="qrBtn"
+          class="qr-btn"
+          type="button"
+          aria-label="Scan QR code">
+          ▦
+        </button>
+
+        <button
+          id="checkBtn"
+          class="check-btn"
+          type="button">
+          Check
+        </button>
       </div>
 
       <div id="result" class="result"></div>
+
     </section>
 
     <section class="notice ar">
-      <p>نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز استجابة سريع يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.</p>
-      <p>يجب أن يكون عنوان الصفحة تابع لعنوان موقعنا الرسمي</p>
+
+      <p>
+        نحذر عملائنا الكرام من وجود ملصق ضمان مزور يحتوي على رمز استجابة سريع
+        يوجه المستخدمين لصفحة إلكترونية مزورة تشبه هذه الصفحة.
+      </p>
+
+      <p>
+        يجب أن يكون عنوان الصفحة تابع لعنوان موقعنا الرسمي:
+      </p>
+
+      <p style="color:black;font-weight:bold;">
+        arabcomputers.com.sa/
+      </p>
+
     </section>
 
     <section class="notice en">
-      <p><strong>Important Notice to Our Valued Customers:</strong></p>
-      <p>We would like to alert you to the presence of counterfeit warranty stickers featuring a QR code that directs users to a fraudulent website designed to imitate the official Arab Computers website.</p>
+
+      <p>
+        <strong>Important Notice to Our Valued Customers:</strong>
+      </p>
+
+      <p>
+        We would like to alert you to the presence of counterfeit warranty
+        stickers featuring a QR code that directs users to a fraudulent website
+        designed to imitate the official Arab Computers website.
+      </p>
+
     </section>
+
   </main>
 
   <div id="qrModal" class="modal hidden">
+
     <div class="modal-card">
-      <button id="closeQr" class="close-btn" type="button">×</button>
+
+      <button id="closeQr" class="close-btn" type="button">
+        ×
+      </button>
+
       <h3>Scan QR Code</h3>
-      <p class="modal-note">امسح QR بالكاميرا أو ارفع صورة QR من الجهاز</p>
+
+      <p class="modal-note">
+        امسح QR بالكاميرا أو ارفع صورة QR من الجهاز
+      </p>
+
       <div id="qr-reader"></div>
+
       <div class="modal-actions">
-        <button id="startCamera" type="button">Open camera</button>
+
+        <button id="startCamera" type="button">
+          Open camera
+        </button>
+
         <label class="upload-label">
           Upload QR image
-          <input id="qrFile" type="file" accept="image/*" hidden />
+          <input
+            id="qrFile"
+            type="file"
+            accept="image/*"
+            hidden
+          />
         </label>
+
       </div>
+
       <p id="qrStatus" class="qr-status"></p>
+
     </div>
+
   </div>
 
-  <button class="scroll-top" type="button" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+  <button
+    class="scroll-top"
+    type="button"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    ↑
+  </button>
 
-  <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
   <script type="module" src="script.js"></script>
+
 </body>
 </html>
