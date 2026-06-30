@@ -12,8 +12,12 @@
     <div class="brand-row">
       <img src="Logo.png" class="brand-logo" alt="Arab Computers" />
       <div class="divider"></div>
+
       <div class="apple-box">
-        <span class="apple-symbol"></span>
+        <svg class="apple-icon" viewBox="0 0 384 512" aria-label="Apple logo">
+          <path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.5 50.4-85.2-19-27.2-47.8-42.2-86.3-45.3-36.5-2.9-76.4 21.4-91 21.4-15.5 0-50.8-20.4-78.6-19.5-57.6.9-118.8 45.9-118.8 141.5 0 28.3 5.2 57.6 15.6 87.8 13.9 39.9 64 137.6 116.3 136 27.4-.7 46.8-19.5 82.4-19.5 34.6 0 52.6 19.5 83.1 19.5 52.8-.8 98-89.6 111.2-129.7-76.5-36-84.3-106.1-84.3-107zM229.3 106.2c28.1-33.3 25.5-63.7 24.7-74.7-24.8 1.4-53.5 16.8-69.8 35.8-18 20.8-28.6 46.5-26.3 74.7 27.1 2.1 54.4-11.7 71.4-35.8z"/>
+        </svg>
+
         <span>Authorised<br>Distributor</span>
       </div>
     </div>
@@ -80,7 +84,12 @@
           class="qr-btn"
           type="button"
           aria-label="Scan QR code">
-          ▦
+          <svg class="qr-svg" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="3" width="6" height="6" rx="1"></rect>
+            <rect x="15" y="3" width="6" height="6" rx="1"></rect>
+            <rect x="3" y="15" width="6" height="6" rx="1"></rect>
+            <rect x="15" y="15" width="6" height="6" rx="1"></rect>
+          </svg>
         </button>
 
         <button
@@ -139,44 +148,4 @@
       <h3>Scan QR Code</h3>
 
       <p class="modal-note">
-        امسح QR بالكاميرا أو ارفع صورة QR من الجهاز
-      </p>
-
-      <div id="qr-reader"></div>
-
-      <div class="modal-actions">
-
-        <button id="startCamera" type="button">
-          Open camera
-        </button>
-
-        <label class="upload-label">
-          Upload QR image
-          <input
-            id="qrFile"
-            type="file"
-            accept="image/*"
-            hidden
-          />
-        </label>
-
-      </div>
-
-      <p id="qrStatus" class="qr-status"></p>
-
-    </div>
-
-  </div>
-
-  <button
-    class="scroll-top"
-    type="button"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    ↑
-  </button>
-
-  <script src="https://unpkg.com/html5-qrcode"></script>
-  <script type="module" src="script.js"></script>
-
-</body>
-</html>
+        امسح QR بالكاميرا أو ارفع صورة QR من
